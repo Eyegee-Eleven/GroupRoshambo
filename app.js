@@ -2,16 +2,17 @@
 class Game {
     constructor(input) {
         this.optionsPlayerChoice = input;
-        this.Winner = "No One";
+        this.Winner;
     }
 
     determineWinner() {
-        if (this.optionsPlayerChoice == Computer.getChoice) {
-        } else if (this.optionsPlayerChoice == "rock" && Computer.getChoice == "paper") {
+        if (this.optionsPlayerChoice == Computer.getChoice()) {
+            this.Winner = "No One";
+        } else if (this.optionsPlayerChoice == "rock" && Computer.getChoice() == "scissors") {
             this.Winner = "Player";
-        } else if (this.optionsPlayerChoice == "scissors" && Computer.getChoice == "rock") {
+        } else if (this.optionsPlayerChoice == "scissors" && Computer.getChoice() == "paper") {
             this.Winner = "Player";
-        } else if (this.optionsPlayerChoice == "paper" && Computer.getChoice == "scissors") {
+        } else if (this.optionsPlayerChoice == "paper" && Computer.getChoice() == "rock") {
             this.Winner = "Player";
         } else {
             this.Winner = "Computer";
